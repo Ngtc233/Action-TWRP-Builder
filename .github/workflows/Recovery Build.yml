@@ -150,7 +150,7 @@ jobs:
         cd external
         mkdir magisk-prebuilt
         cd ..
-        cp -rf external_magisk-prebuilt/ external/magisk-prebuilt/
+        cp -rf external_magisk-prebuilt/* external/magisk-prebuilt/
         
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
