@@ -150,8 +150,8 @@ jobs:
         cd external
         mkdir magisk-prebuilt
         cd ..
-        cp -rf external_magisk-prebuilt/* external/magisk-prebuilt/
-        
+        cp -r external_magisk-prebuilt/* external/magisk-prebuilt
+        rm external_magisk-prebuilt
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && make ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc --all)
