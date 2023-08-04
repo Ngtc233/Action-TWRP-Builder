@@ -149,11 +149,8 @@ jobs:
         git clone https://github.com/PitchBlackRecoveryProject/external_magisk-prebuilt -b master
         cd external
         mkdir magisk-prebuilt
-        cd magisk-prebuilt
-        mkdir external_magisk-prebuilt
         cd ..
-        cd ..
-        cp -r external_magisk-prebuilt/* external/magisk-prebuilt/external_magisk-prebuilt
+        cp -rf external_magisk-prebuilt/ external/magisk-prebuilt/
         
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
