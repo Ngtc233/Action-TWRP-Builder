@@ -147,9 +147,6 @@ jobs:
     - name: Building recovery
       run: |
         git clone https://github.com/PitchBlackRecoveryProject/external_magisk-prebuilt -b master
-        cd external
-        mkdir magisk-prebuilt
-        cd ..
         cp -r external_magisk-prebuilt/* external/magisk-prebuilt
         rm -rf external_magisk-prebuilt
         source build/envsetup.sh
